@@ -93,7 +93,6 @@ A detailed analysis of the user responses reveals a clear and consistent prefere
 The experimental setup, while functional, contained inconsistencies that impact the direct comparability of the two methods, particularly concerning efficiency.
 1.	Inconsistent Optimization: The final Textual Inversion script benefited from a significant latent caching optimization, which was not implemented in the LoRA script. This led to a skewed comparison of training time; while TI was faster per-epoch, this was due to a superior implementation, not necessarily a more efficient underlying method.
 2.	Initial xformers Omission: The initial TI training runs were extremely slow due to the omission of the xformers memory-efficient attention, a standard optimization that was present in the LoRA script from the start.
-3.	
 Improvement: For a truly fair and direct comparison, both training pipelines should be identically optimized. Both scripts should include xformers and latent caching to ensure that any observed differences in performance are attributable to the PEFT methods themselves, not the surrounding code.
 
 # Conclusion
