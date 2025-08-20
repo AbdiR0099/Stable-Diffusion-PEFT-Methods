@@ -10,7 +10,7 @@ The 115 source landmark images were processed using the Stable Diffusion WEBUI, 
 
 A critical component of the synthetic data generation phase was careful crafting of text prompts. For each image, a unique prompt was created and saved to a text file. The prompts followed a structured template:
 
-                 ```<name of landmark> <location> <description> <description of composition>```
+>                   ***name of landmark location description description of composition***
 
 Image transformation for the suitable dataset is a crucial step. There are 3 transformations applied to each of the source image:
 •	Resolution Standardization: This step resizes each image to 512*512 pixels. This is essential because neural networks require fixed-size inputs.
