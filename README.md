@@ -30,7 +30,7 @@ The training process for the LoRA model was configured to run for 10 epochs. The
 
 The final loss values for each epoch are represented below:
 
-![LoRA Loss!](./LoRA Training-Validation Loss.png)
+![LoRA Loss!](./LoRA-Training-Validation-Loss.png)
 
 •	Initial Convergence: The model demonstrates a significant learning event between Epoch 1 and Epoch 2, where the validation loss drops dramatically from 0.2019 to 0.0907. This indicates that the model quickly began to understand the general patterns of the "ghiblivis" style.
 
