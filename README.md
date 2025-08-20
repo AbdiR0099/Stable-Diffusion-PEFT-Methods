@@ -10,7 +10,7 @@ The 115 source landmark images were processed using the Stable Diffusion WEBUI, 
 
 A critical component of the synthetic data generation phase was careful crafting of text prompts. For each image, a unique prompt was created and saved to a text file. The prompts followed a structured template:
 
-                            <name of landmark> <location> <description> <description of composition>
+             <name of landmark> <location> <description> <description of composition>
 
 Image transformation for the suitable dataset is a crucial step. There are 3 transformations applied to each of the source image:
 •	Resolution Standardization: This step resizes each image to 512*512 pixels. This is essential because neural networks require fixed-size inputs.
@@ -28,7 +28,7 @@ The training process for the LoRA model was configured to run for 10 epochs. The
 
 The final loss values for each epoch are represented below:
 
-![LoRA Loss!](LoRA Training & Validation Loss.png)
+![LoRA Loss!](./LoRA Training-Validation Loss.png)
 
 •	Initial Convergence: The model demonstrates a significant learning event between Epoch 1 and Epoch 2, where the validation loss drops dramatically from 0.2019 to 0.0907. This indicates that the model quickly began to understand the general patterns of the "ghiblivis" style.
 •	Loss Fluctuation: Both the training and validation loss exhibit considerable fluctuation throughout the training process. This is expected and normal when fine-tuning on a small, diverse dataset. The model is continuously adjusting its weights based on different batches of images, which can cause temporary increases in loss as it encounters new or challenging examples.
@@ -52,7 +52,7 @@ Total Training Time: Over its 15-epoch run, the total computational time for the
 
 The Textual Inversion model was trained for 15 epochs. The final loss values for each epoch are represented below:
  
-![TI Loss!](TI Training & Validation Loss.png)
+![TI Loss!](./TI Training-Validation Loss.png)
 
 •	Training Loss Trend: The training loss for Textual Inversion shows a more consistent, albeit noisy, downward trend over the 15 epochs, starting at 0.1469 and ending at 0.1383. This indicates that the model was continuously able to improve its performance on the data it was seeing during training.
 •	Validation Loss and Overfitting: The validation loss tells a more complex and crucial story. The model achieves its best validation score of 0.0618 in Epoch 8. After this point, the validation loss consistently increases for the next five epochs (Epochs 9-13) before dropping again at the end. This pattern is a classic and clear signal of overfitting. The model learned the style effectively up to Epoch 8. Beyond this point, it began to memorize the specific details of the training images, which caused its performance on the unseen validation images to degrade. This is the exact scenario that the use of a validation set is designed to detect.
