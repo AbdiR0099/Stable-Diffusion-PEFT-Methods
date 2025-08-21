@@ -81,7 +81,7 @@ A comparative evaluation was performed using both quantitative metrics and a qua
 ### Quantitative Analysis
 
 * **LoRA Performance:** Showed stable and efficient training over 10 epochs, with a total training time of **2 hours and 40 minutes**. The validation loss reached its lowest point in the final epoch, indicating robust generalization without overfitting.
-    ![LoRA Training and Validation Loss Chart](./LORA-Training-Validation-Loss.png)
+    ![LoRA Training and Validation Loss Chart](./LoRA-Training-Validation-Loss.png)
 * **Textual Inversion Performance:** Training was accelerated by latent caching but ran for 15 epochs, taking **3 hours and 15 minutes**. The model achieved its best validation score at Epoch 8, after which it showed clear signs of **overfitting** as validation loss consistently increased.
     ![TI Training and Validation Loss Chart](./TI-Training-Validation-Loss.png)
 
